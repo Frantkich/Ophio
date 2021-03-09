@@ -3,11 +3,9 @@
 
 Tile::Tile(int size)
 {
-    setPixmap(QPixmap(":image/bloc.png"));
-
-    setTransformOriginPoint(boundingRect().center());
-    setRotation(45);
+    this->top->setPixmap(QPixmap(":image/bloc.png"));
+    this->top->setTransformOriginPoint(this->top->boundingRect().center());
+    this->top->setRotation(45);
     QTransform txf;
-    setTransform(txf.scale(size*2, size), false);
-
+    this->top->setTransform(txf.scale(size*2, size), false);
 }

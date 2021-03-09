@@ -4,11 +4,12 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 
-class Tile : public QObject, public QGraphicsPixmapItem
+class Tile : public QObject
 {
     Q_OBJECT
 public:
     Tile(int size);
+    QGraphicsPixmapItem* top = new QGraphicsPixmapItem();
 };
 
 #endif // TILE_H
