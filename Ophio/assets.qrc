@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>bloc.png</file>
+    </qresource>
+</RCC>

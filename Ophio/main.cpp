@@ -1,8 +1,15 @@
-#include <QCoreApplication>
+#include <QApplication>
+
+#include "gameloop.h"
+
+GameLoop* game;
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
+
+    game = new GameLoop();
+    game->show();
 
     return a.exec();
 }
