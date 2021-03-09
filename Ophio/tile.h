@@ -8,11 +8,7 @@ class Tile : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Tile();
-
-public:
-    int size = 50;
-
+    Tile(int size);
 };
 
 #endif // TILE_H

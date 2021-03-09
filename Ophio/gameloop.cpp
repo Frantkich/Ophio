@@ -1,17 +1,18 @@
 #include "gameloop.h"
-#include "tile.h"
+#include "fightmap.h"
 
 GameLoop::GameLoop(QWidget *parent)
 {
-    scene = new QGraphicsScene();
+
+    QGraphicsScene *scene = new QGraphicsScene();
 
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFixedSize(500,500);
+    setSceneRect(0, 0, 500, 500);
 
-    Tile *tile = new Tile();
-    scene->addItem(tile);
+    FightMap *fightmap = new FightMap(scene, 3, 4);
+    fightmap->addScene();
 
     show();
 }
