@@ -2,28 +2,32 @@
 #include "tile.h"
 #include "health.h"
 #include "healthbar.h"
-
 #include <QtGui>
+#include "fightmap.h"
+
 
 GameLoop::GameLoop(QWidget *parent)
 {
-    scene = new QGraphicsScene();
+
+    QGraphicsScene *scene = new QGraphicsScene();
 
     scene->setSceneRect(0, 0, 500, 500);
 
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFixedSize(500,500);
+    setSceneRect(0, 0, 500, 500);
 
-    Tile *tile = new Tile();
-    scene->addItem(tile);
+    FightMap *fightmap = new FightMap(scene, 3, 4);
+    fightmap->addScene();
 
     /* Vie et Barre de vie */
 
     Health *health = new Health(100);
+    /* Test pour couleurs HpBar */
     health->decrease(49);
 
+    /* ProgressBar pour la barre de pv */
     QProgressBar *hpBar = new QProgressBar();
     hpBar->setRange(0, health->getMaxHealth());
     hpBar->setValue(health->getHealth());
@@ -40,9 +44,6 @@ GameLoop::GameLoop(QWidget *parent)
     }
     hpBar->move(350, 10);
     scene->addWidget(hpBar);
-
-    //health->setPos(health->x()+425, health->y()+25);
-    //scene->addItem(health);
 
     show();
 }

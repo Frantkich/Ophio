@@ -1,17 +1,13 @@
 #include "tile.h"
+#include <QDebug>
 
-Tile::Tile()
+Tile::Tile(int size)
 {
     setPixmap(QPixmap(":image/bloc.png"));
 
-    QTransform txf = QTransform();
+    setTransformOriginPoint(boundingRect().center());
+    setRotation(45);
+    QTransform txf;
+    setTransform(txf.scale(size*2, size), false);
 
-    txf.scale(4, 2);
-    setTransform(txf,false);
-
-    txf.translate(boundingRect().width()/2, 0);
-    txf.rotate(45, Qt::ZAxis);
-    txf.translate(-boundingRect().width()/2, 0);
-
-    setTransform(txf,false);
 }

@@ -3,11 +3,13 @@ QT += core gui widgets
 CONFIG += c++11
 
 HEADERS += \
+    fightmap.h \
     gameloop.h \
     health.h \
     tile.h
 
 SOURCES += \
+        fightmap.cpp \
         gameloop.cpp \
         health.cpp \
         main.cpp \
