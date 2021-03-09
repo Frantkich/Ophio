@@ -4,10 +4,12 @@ CONFIG += c++11
 
 HEADERS += \
     gameloop.h \
+    health.h \
     tile.h
 
 SOURCES += \
         gameloop.cpp \
+        health.cpp \
         main.cpp \
         tile.cpp
 
