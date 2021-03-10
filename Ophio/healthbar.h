@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QProgressBar>
-#include "health.h"
+#include "ophio.h"
 
 class HealthBar : public QProgressBar
 {

@@ -1,42 +1,42 @@
-#include "health.h"
+#include "ophio.h"
 #include <QProgressBar>
 #include <QGraphicsScene>
 
 
 
-Health::Health(int maxHp)
+Ophio::Ophio(int maxHp)
 {
     maxHealth = maxHp;
     health = maxHealth;
 }
 
-void Health::decrease(unsigned damage)
+void Ophio::decreaseHp(unsigned damage)
 {
     health = health - damage;
 }
 
-int Health::getHealth()
+int Ophio::getHealth()
 {
     return health;
 }
 
-int Health::getMaxHealth()
+int Ophio::getMaxHealth()
 {
     return maxHealth;
 }
 
-void Health::showHp(Health* health, QGraphicsScene *scene)
+void Ophio::showHp(QGraphicsScene *scene)
 {
     /* ProgressBar pour la barre de pv */
     QProgressBar *hpBar = new QProgressBar();
-    hpBar->setRange(0, health->getMaxHealth());
-    hpBar->setValue(health->getHealth());
+    hpBar->setRange(0, this->getMaxHealth());
+    hpBar->setValue(this->getHealth());
     hpBar->setFixedSize(140,25);
     hpBar->setTextVisible(false);
-    if (health->getHealth() < (health->getMaxHealth()/5)) {
+    if (this->getHealth() < (this->getMaxHealth()/5)) {
         hpBar->setStyleSheet("QProgressBar::chunk{background-color:red}");
     }
-    else if (health->getHealth() < (health->getMaxHealth()/2)) {
+    else if (this->getHealth() < (this->getMaxHealth()/2)) {
         hpBar->setStyleSheet("QProgressBar::chunk{background-color:orange}");
     }
     else {

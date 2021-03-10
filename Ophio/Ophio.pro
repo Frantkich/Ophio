@@ -5,14 +5,14 @@ CONFIG += c++11
 HEADERS += \
     fightmap.h \
     gameloop.h \
-    health.h \
+    ophio.h \
     tile.h
 
 SOURCES += \
         fightmap.cpp \
         gameloop.cpp \
-        health.cpp \
         main.cpp \
+        ophio.cpp \
         tile.cpp
 
 
