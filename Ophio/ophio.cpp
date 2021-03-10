@@ -33,15 +33,9 @@ void Ophio::showHp(QGraphicsScene *scene)
     hpBar->setValue(this->getHealth());
     hpBar->setFixedSize(140,25);
     hpBar->setTextVisible(false);
-    if (this->getHealth() < (this->getMaxHealth()/5)) {
-        hpBar->setStyleSheet("QProgressBar::chunk{background-color:red}");
-    }
-    else if (this->getHealth() < (this->getMaxHealth()/2)) {
-        hpBar->setStyleSheet("QProgressBar::chunk{background-color:orange}");
-    }
-    else {
-        hpBar->setStyleSheet("QProgressBar::chunk{background-color:green}");
-    }
+    if (this->getHealth() < (this->getMaxHealth()/5)) { hpBar->setStyleSheet("QProgressBar::chunk{background-color:red}"); }
+    else if (this->getHealth() < (this->getMaxHealth()/2)) { hpBar->setStyleSheet("QProgressBar::chunk{background-color:orange}"); }
+    else { hpBar->setStyleSheet("QProgressBar::chunk{background-color:green}"); }
     hpBar->move(350, 10);
     scene->addWidget(hpBar);
 }
