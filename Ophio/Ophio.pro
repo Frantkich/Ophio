@@ -6,14 +6,16 @@ HEADERS += \
     fightmap.h \
     gameloop.h \
     ophio.h \
-    tile.h
+    tile.h \
+    tilesetsplitter.h
 
 SOURCES += \
         fightmap.cpp \
         gameloop.cpp \
         main.cpp \
         ophio.cpp \
-        tile.cpp
+        tile.cpp \
+        tilesetsplitter.cpp
 
 
 qnx: target.path = /tmp/$${TARGET}/bin
