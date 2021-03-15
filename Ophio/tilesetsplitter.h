@@ -8,11 +8,9 @@
 class TilesetSplitter
 {
 public:
-    TilesetSplitter(QString path);
+    TilesetSplitter(QString path, int tile_size);
 
-    QPixmap* tileset;
-
-    QVector< QVector<QPixmap> > split(int tile_size, int x_min= 0, int y_min = 0, int x_max = 0, int y_max = 0);
+    QVector< QVector<QPixmap> > tiles_list;
 };
 
 #endif // TILESETSPLITTER_H
