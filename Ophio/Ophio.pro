@@ -3,6 +3,8 @@ QT += core gui widgets
 CONFIG += c++11
 
 HEADERS += \
+    enemy.h \
+    entity.h \
     fightmap.h \
     gameloop.h \
     ophio.h \
@@ -10,6 +12,8 @@ HEADERS += \
     tilesetsplitter.h
 
 SOURCES += \
+        enemy.cpp \
+        entity.cpp \
         fightmap.cpp \
         gameloop.cpp \
         main.cpp \

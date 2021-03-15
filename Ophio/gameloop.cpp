@@ -1,6 +1,7 @@
 #include "gameloop.h"
 #include "tile.h"
 #include "ophio.h"
+#include "entity.h"
 #include "fightmap.h"
 
 
@@ -20,9 +21,9 @@ GameLoop::GameLoop(QWidget *parent)
     fightmap->addScene();
 
     /* Vie et Barre de vie */
-    Ophio *ophio = new Ophio(100);
+    Ophio *ophio = new Ophio();
     /* Test pour couleurs HpBar */
-    ophio->decreaseHp(49);
+    ophio->decreaseHp(51);
     /* Showing Hp bar on scene */
     ophio->showHp(scene);
 

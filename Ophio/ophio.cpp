@@ -1,28 +1,11 @@
 #include "ophio.h"
+#include "entity.h"
 #include <QProgressBar>
 #include <QGraphicsScene>
 
-
-
-Ophio::Ophio(int maxHp)
+Ophio::Ophio()
+    : Entity(100, 0, "Ophio")
 {
-    maxHealth = maxHp;
-    health = maxHealth;
-}
-
-void Ophio::decreaseHp(unsigned damage)
-{
-    health = health - damage;
-}
-
-int Ophio::getHealth()
-{
-    return health;
-}
-
-int Ophio::getMaxHealth()
-{
-    return maxHealth;
 }
 
 void Ophio::showHp(QGraphicsScene *scene)

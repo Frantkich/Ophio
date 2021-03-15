@@ -2,19 +2,13 @@
 #define OPHIO_H
 
 #include <QGraphicsScene>
+#include "entity.h"
 
-class Ophio
+class Ophio : public Entity
 {
 public:
-    Ophio(int maxHp);
-    void decreaseHp(unsigned damage);
-    int getHealth();
-    int getMaxHealth();
+    Ophio();
     void showHp(QGraphicsScene *scene);
-
-private :
-    int health;
-    int maxHealth;
 };
 
 #endif // OPHIO_H
