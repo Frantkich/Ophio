@@ -9,6 +9,7 @@ public:
     Enemy(bool isMelee, int damage);
     void attack(int x, int y);
     void attackRange();
+    void spawn();
 
 private :
     bool isMelee;
