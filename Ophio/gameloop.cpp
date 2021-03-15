@@ -10,7 +10,7 @@ GameLoop::GameLoop(QWidget *parent)
 
     FightMap *fightmap = new FightMap(this->scene, 4, 2);
     fightmap->tile_px=16;
-    fightmap->addScene();
+    fightmap->addSceneSide();
 
     show();
 }

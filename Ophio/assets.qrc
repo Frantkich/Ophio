@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/image">
         <file>bloc.png</file>
+        <file>bloc-side.png</file>
     </qresource>
 </RCC>

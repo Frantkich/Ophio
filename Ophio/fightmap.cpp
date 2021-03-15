@@ -33,3 +33,8 @@ void FightMap::addScene()
         y_offset -= tile_pace * this->tile_size * ( this->scene_size - 1 );
     }
 }
+
+void FightMap::addSceneSide()
+{
+    this->scene->addItem(this->map[0][0]->side);
+}
