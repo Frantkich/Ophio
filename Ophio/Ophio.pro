@@ -3,15 +3,23 @@ QT += core gui widgets
 CONFIG += c++11
 
 HEADERS += \
+    enemy.h \
+    entity.h \
     fightmap.h \
     gameloop.h \
-    tile.h
+    ophio.h \
+    tile.h \
+    tilesetsplitter.h
 
 SOURCES += \
+        enemy.cpp \
+        entity.cpp \
         fightmap.cpp \
         gameloop.cpp \
         main.cpp \
-        tile.cpp
+        ophio.cpp \
+        tile.cpp \
+        tilesetsplitter.cpp
 
 
 qnx: target.path = /tmp/$${TARGET}/bin
