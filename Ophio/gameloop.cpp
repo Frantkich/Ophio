@@ -18,21 +18,21 @@ GameLoop::GameLoop(QWidget *parent)
     startButton->setText("Start");
     startButton->setFixedSize(80,80);
     startButton->move((scene->width()-67), (scene->height()-80));
-    scene->addWidget(startButton);
+    //scene->addWidget(startButton);
 
     // Action Button
     actionButton->setStyleSheet("color: black; background-color: white;");
     actionButton->setText("actionButton");
     actionButton->setFixedSize(300,40);
     actionButton->move(5, (scene->height()-80));
-    scene->addWidget(actionButton);
+    //scene->addWidget(actionButton);
 
     // Move Button
     moveButton->setStyleSheet("color: black; background-color: white;");
     moveButton->setText("moveButton");
     moveButton->setFixedSize(300,40);
     moveButton->move(5, (scene->height()-40));
-    scene->addWidget(moveButton);
+    //scene->addWidget(moveButton);
 
     /* Vie et Barre de vie */
     Ophio *ophio = new Ophio();
