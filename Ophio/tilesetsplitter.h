@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QPainter>
 
 class TilesetSplitter
 {
@@ -19,7 +20,10 @@ public:
 
 public:
     QVector< QVector<QPixmap> > tiles_list;
-    QFile* json_map;
+
+    QJsonDocument json_map;
+
+    void get(QString category_name, QString name);
 };
 
 #endif // TILESETSPLITTER_H

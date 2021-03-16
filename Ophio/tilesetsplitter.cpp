@@ -2,7 +2,12 @@
 
 TilesetSplitter::TilesetSplitter(QString path, QString json_file, int tile_size)
 {
-    this->json_map = new QFile(json_file);
+    QFile* file = new QFile(json_file);
+    file->open(QIODevice::ReadOnly | QIODevice::Text);
+    QString file_content = file->readAll();
+    this->json_map = QJsonDocument::fromJson(file_content.toUtf8());
+    file->close();
+
     QPixmap* tileset = new QPixmap(path);
 
     for (int y = 0; y < tileset->height(); y+= tile_size)
@@ -19,15 +24,22 @@ TilesetSplitter::TilesetSplitter(QString path, QString json_file, int tile_size)
 
 }
 
-void TilesetSplitter::get(QString name)
+void TilesetSplitter::get(QString category_name, QString name)
 {
-    this->json_map->open(QIODevice::ReadOnly | QIODevice::Text);
-    QString file = this->json_map->readAll();
-    this->json_map->close();
+    QJsonObject json_object = this->json_map.object();
+    QJsonObject category = json_object.value(category_name).toObject();
+    QJsonObject obj = category.value(name).toObject();
 
-    QJsonDocument json_doc = QJsonDocument::fromJson(file.toUtf8());
-    QJsonObject json_object = json_doc.object();
+    //QVector<QPixmap> tile_row;
+    //for (int size_t = 0; size_t < obj.value("nb_sprite"); size_t++){
+        QRectF tile = QRectF(0, 0, 16 * obj.value("width").toInt(), 16 * obj.value("height").toInt());
 
-    QJsonObject knight = json_object["knight"].toObject();
-    qDebug() << knight["width"];
+        for (int y = obj.value("y").toInt(); y < obj.value("y").toInt() + obj.value("height").toInt(); y++){
+            QPainter* painter = new QPainter();
+            for (int x = obj.value("x").toInt(); x < obj.value("x").toInt() + obj.value("width").toInt(); x++){
+                QRectF source(x * 16, y * 16, 16, 16);
+                painter->drawPixmap(tile, this->tiles_list[x][y], source);
+            }
+        }
+    //}
 }
