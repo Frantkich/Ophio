@@ -1,8 +1,13 @@
 #include "tile.h"
 #include <QDebug>
 
+#include <tilesetsplitter.h>
+
 Tile::Tile(int size)
 {
+    TilesetSplitter *t = new TilesetSplitter(":/image/DungeonTileset.png");
+    t->get("tchoupi");
+
     this->top->setPixmap(QPixmap(":image/bloc.png"));
     this->top->setTransformOriginPoint(this->top->boundingRect().center());
     this->top->setRotation(45);

@@ -4,13 +4,19 @@
 #include <QPixmap>
 #include <QString>
 #include <QVector>
+#include <QFile>
+#include <QDebug>
 
 class TilesetSplitter
 {
 public:
-    TilesetSplitter(QString path, int tile_size);
+    TilesetSplitter(QString path, QString json_map, int tile_size);
 
     QVector< QVector<QPixmap> > tiles_list;
+
+    QFile json_map;
+
+    void get(QString name);
 };
 
 #endif // TILESETSPLITTER_H

@@ -3,4 +3,7 @@
         <file>bloc.png</file>
         <file>DungeonTileset.png</file>
     </qresource>
+    <qresource prefix="/json" lang="json">
+        <file>tilesetMap.json</file>
+    </qresource>
 </RCC>

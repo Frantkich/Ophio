@@ -1,0 +1,72 @@
+{
+    "decorations" : {
+        "wall1" : {
+            "pos_x" : 1,
+            "pos_Y" : 1,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "ref_flag" : {
+            "pos_x" : 1,
+            "pos_Y" : 2,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        }
+    },
+
+    "entities" : {
+        "elf_m" : {
+            "pos_x" : 3,
+            "pos_Y" : 5,
+            "height" : 2,
+            "width" : 1,
+            "nb_sprites" : 9
+        },
+
+        "knight" : {
+            "pos_x" : 8,
+            "pos_Y" : 5,
+            "height" : 2,
+            "width" : 1,
+            "nb_sprites" : 9
+        }
+    },
+
+    "tiny_monsters" : {
+        "little_brown" : {
+            "pos_x" : 23,
+            "pos_Y" : 1,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprites" : 8
+        },
+
+        "little_green" : {
+            "pos_x" : 23,
+            "pos_Y" : 2,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprites" : 8
+        }
+    },
+
+    "big_monsters" : {
+        "big_brown" : {
+            "pos_x" : 1,
+            "pos_Y" : 23,
+            "height" : 2,
+            "width" : 2,
+            "nb_sprites" : 8
+        },
+
+        "big_green" : {
+            "pos_x" : 1,
+            "pos_Y" : 25,
+            "height" : 2,
+            "width" : 2,
+            "nb_sprites" : 8
+        }
+    }
+}

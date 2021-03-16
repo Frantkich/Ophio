@@ -1,7 +1,8 @@
 #include "tilesetsplitter.h"
 
-TilesetSplitter::TilesetSplitter(QString path, int tile_size)
+TilesetSplitter::TilesetSplitter(QString path, QString json_file, int tile_size)
 {
+    this->json_map = new QFile(json_file);
     QPixmap* tileset = new QPixmap(path);
 
     for (int y = 0; y < tileset->height(); y+= tile_size)
@@ -16,4 +17,12 @@ TilesetSplitter::TilesetSplitter(QString path, int tile_size)
         this->tiles_list.push_back(new_row);
     }
 
+}
+
+TilesetSplitter::get(QString name)
+{
+    this->json_map.open(QIODevice::ReadOnly | QIODevice::Text);
+    val = file.readAll();
+    file.close();
+    qDebug() << val;
 }
