@@ -6,6 +6,8 @@
 #include <QVector>
 #include <QFile>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 class TilesetSplitter
 {
@@ -14,7 +16,7 @@ public:
 
     QVector< QVector<QPixmap> > tiles_list;
 
-    QFile json_map;
+    QFile* json_map;
 
     void get(QString name);
 };

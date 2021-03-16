@@ -19,10 +19,15 @@ TilesetSplitter::TilesetSplitter(QString path, QString json_file, int tile_size)
 
 }
 
-TilesetSplitter::get(QString name)
+void TilesetSplitter::get(QString name)
 {
-    this->json_map.open(QIODevice::ReadOnly | QIODevice::Text);
-    val = file.readAll();
-    file.close();
-    qDebug() << val;
+    this->json_map->open(QIODevice::ReadOnly | QIODevice::Text);
+    QString file = this->json_map->readAll();
+    this->json_map->close();
+
+    QJsonDocument json_doc = QJsonDocument::fromJson(file.toUtf8());
+    QJsonObject json_object = json_doc.object();
+
+    QJsonObject knight = json_object["knight"].toObject();
+    qDebug() << knight["width"];
 }

@@ -5,8 +5,8 @@
 
 Tile::Tile(int size)
 {
-    TilesetSplitter *t = new TilesetSplitter(":/image/DungeonTileset.png");
-    t->get("tchoupi");
+    //TilesetSplitter *t = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json", 16);
+    //t->get("knight");
 
     this->top->setPixmap(QPixmap(":image/bloc.png"));
     this->top->setTransformOriginPoint(this->top->boundingRect().center());
