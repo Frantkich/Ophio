@@ -7,6 +7,7 @@ HEADERS += \
     entity.h \
     fightmap.h \
     gameloop.h \
+    hud.h \
     ophio.h \
     tile.h \
     tilesetsplitter.h
@@ -16,6 +17,7 @@ SOURCES += \
         entity.cpp \
         fightmap.cpp \
         gameloop.cpp \
+        hud.cpp \
         main.cpp \
         ophio.cpp \
         tile.cpp \
