@@ -14,6 +14,7 @@ class GameLoop : public QGraphicsView
 public:
     GameLoop(QWidget * parent=0);
 
+public:
     QGraphicsScene* scene = new QGraphicsScene();
 
 };

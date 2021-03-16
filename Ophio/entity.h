@@ -7,6 +7,8 @@ class Entity
 {
 public:
     Entity(int maxHp, int movingRange, QString name);
+
+public:
     void decreaseHp(unsigned damage);
     int getHealth();
     int getMaxHealth();

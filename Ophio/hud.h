@@ -7,10 +7,15 @@ class Hud
 {
 public:
     Hud();
+
+public:
+    void showHud(QGraphicsScene* scene);
+
+public:
     QPushButton* startButton = new QPushButton();
     QPushButton* actionButton = new QPushButton();
     QPushButton* moveButton = new QPushButton();
-    void showHud(QGraphicsScene* scene);
+
 };
 
 #endif // HUD_H

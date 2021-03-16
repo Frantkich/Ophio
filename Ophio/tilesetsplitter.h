@@ -14,11 +14,12 @@ class TilesetSplitter
 public:
     TilesetSplitter(QString path, QString json_map, int tile_size);
 
-    QVector< QVector<QPixmap> > tiles_list;
-
-    QFile* json_map;
-
+public:
     void get(QString name);
+
+public:
+    QVector< QVector<QPixmap> > tiles_list;
+    QFile* json_map;
 };
 
 #endif // TILESETSPLITTER_H

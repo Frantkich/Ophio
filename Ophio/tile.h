@@ -9,6 +9,8 @@ class Tile : public QObject
     Q_OBJECT
 public:
     Tile(int size);
+
+public:
     QGraphicsPixmapItem* top = new QGraphicsPixmapItem();
     QGraphicsPixmapItem* side = new QGraphicsPixmapItem();
 };

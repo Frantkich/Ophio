@@ -8,6 +8,8 @@ class Ophio : public Entity
 {
 public:
     Ophio();
+
+public:
     void showHp(QGraphicsScene *scene);
 };
 

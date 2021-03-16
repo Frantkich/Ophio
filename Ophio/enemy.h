@@ -7,6 +7,8 @@ class Enemy : public Entity
 {
 public:
     Enemy(bool isMelee, int damage);
+
+public:
     void attack(int x, int y);
     void attackRange();
     void spawn();

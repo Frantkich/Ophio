@@ -9,8 +9,12 @@ class FightMap
 {
 public:
     FightMap(QGraphicsScene* scene, int scene_size, int tile_size);
+
+public:
     void addScene();
     void addSceneSide();
+
+public:
     int tile_px;
 
 private:
