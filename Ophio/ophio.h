@@ -1,16 +1,14 @@
 #ifndef OPHIO_H
 #define OPHIO_H
 
-#include <QGraphicsScene>
+#include <QGridLayout>
 #include "entity.h"
 
 class Ophio : public Entity
 {
 public:
     Ophio();
-
-public:
-    void showHp(QGraphicsScene *scene);
+    void showHp(QGridLayout *scene);
 };
 
 #endif // OPHIO_H

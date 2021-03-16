@@ -10,18 +10,5 @@ GameLoop::GameLoop(QWidget *parent)
     FightMap *fightmap = new FightMap(this->scene, 4, 2);
     fightmap->tile_px=16;
     fightmap->addScene();
-
-    Hud* hud = new Hud();
-    hud->showHud(scene);
-
-    /* Vie et Barre de vie */
-    Ophio *ophio = new Ophio();
-    /* Test pour couleurs HpBar */
-    ophio->decreaseHp(0);
-    /* Showing Hp bar on scene */
-//    ophio->showHp(scene);
-
-
-
     show();
 }
