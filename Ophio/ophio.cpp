@@ -8,7 +8,7 @@ Ophio::Ophio()
 {
 }
 
-void Ophio::showHp(QGridLayout *scene)
+void Ophio::showHp(QGridLayout *layout)
 {
     /* ProgressBar pour la barre de pv */
     QProgressBar *hpBar = new QProgressBar();
@@ -19,5 +19,5 @@ void Ophio::showHp(QGridLayout *scene)
     if (this->getHealth() < (this->getMaxHealth()/5)) { hpBar->setStyleSheet("QProgressBar::chunk{background-color:red}"); }
     else if (this->getHealth() < (this->getMaxHealth()/2)) { hpBar->setStyleSheet("QProgressBar::chunk{background-color:orange}"); }
     else { hpBar->setStyleSheet("QProgressBar::chunk{background-color:green}"); }
-    scene->addWidget(hpBar, 0, 2, 1, 1, Qt::AlignHCenter);
+    layout->addWidget(hpBar, 0, 2, 1, 1, Qt::AlignHCenter);
 }

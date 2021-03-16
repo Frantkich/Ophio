@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     /* Showing Hp bar on scene */
     ophio->showHp(layout);
 
-    layout->addWidget(game, 1, 0, 1, 3, Qt::AlignHCenter);
+    layout->addWidget(game, 1, 1, 1, 3);
     window->setLayout(layout);
     window->show();
 
