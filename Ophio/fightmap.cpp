@@ -1,6 +1,7 @@
 #include "fightmap.h"
 #include "tile.h"
 #include <QDebug>
+#include <tilesetsplitter.h>
 
 FightMap::FightMap(QGraphicsScene* scene, int scene_size, int tile_size)
 {
@@ -32,6 +33,8 @@ void FightMap::addScene()
         x_offset -= tile_pace * this->tile_size * ( this->scene_size + 1 );
         y_offset -= tile_pace * this->tile_size * ( this->scene_size - 1 );
     }
+    //TilesetSplitter* t = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
+    //this->scene->addPixmap(t->get("big_monsters", "big_green"));
 }
 
 void FightMap::addSceneSide()

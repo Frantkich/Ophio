@@ -1,15 +1,17 @@
 {
+    "tile_size" : 16,
+
     "decorations" : {
         "wall1" : {
-            "pos_x" : 1,
-            "pos_Y" : 1,
+            "pos_x" : 16,
+            "pos_y" : 12,
             "height" : 1,
             "width" : 1,
             "nb_sprite" : 1
         },
-        "ref_flag" : {
-            "pos_x" : 1,
-            "pos_Y" : 2,
+        "red_flag" : {
+            "pos_x" : 16,
+            "pos_y" : 28,
             "height" : 1,
             "width" : 1,
             "nb_sprite" : 1
@@ -18,16 +20,16 @@
 
     "entities" : {
         "elf_m" : {
-            "pos_x" : 3,
-            "pos_Y" : 5,
+            "pos_x" : 128,
+            "pos_y" : 32,
             "height" : 2,
             "width" : 1,
             "nb_sprites" : 9
         },
 
-        "knight" : {
-            "pos_x" : 8,
-            "pos_Y" : 5,
+        "knight_m" : {
+            "pos_x" : 128,
+            "pos_y" : 96,
             "height" : 2,
             "width" : 1,
             "nb_sprites" : 9
@@ -36,16 +38,16 @@
 
     "tiny_monsters" : {
         "little_brown" : {
-            "pos_x" : 23,
-            "pos_Y" : 1,
+            "pos_x" : 372,
+            "pos_y" : 16,
             "height" : 1,
             "width" : 1,
             "nb_sprites" : 8
         },
 
         "little_green" : {
-            "pos_x" : 23,
-            "pos_Y" : 2,
+            "pos_x" : 372,
+            "pos_y" : 32,
             "height" : 1,
             "width" : 1,
             "nb_sprites" : 8
@@ -54,16 +56,16 @@
 
     "big_monsters" : {
         "big_brown" : {
-            "pos_x" : 1,
-            "pos_Y" : 23,
+            "pos_x" : 22,
+            "pos_y" : 270,
             "height" : 2,
             "width" : 2,
             "nb_sprites" : 8
         },
 
         "big_green" : {
-            "pos_x" : 1,
-            "pos_Y" : 25,
+            "pos_x" : 22,
+            "pos_y" : 320,
             "height" : 2,
             "width" : 2,
             "nb_sprites" : 8

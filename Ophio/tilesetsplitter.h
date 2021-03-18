@@ -3,27 +3,27 @@
 
 #include <QPixmap>
 #include <QString>
-#include <QVector>
 #include <QFile>
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QPainter>
 
 class TilesetSplitter
 {
 public:
-    TilesetSplitter(QString path, QString json_map, int tile_size);
+    TilesetSplitter(QString tileset_path, QString json_map_path);
 
 public:
-    void get(QString name);
+    QPixmap* getTileset();
 
-public:
-    QVector< QVector<QPixmap> > tiles_list;
+    QJsonDocument getJsonMap();
+
+    QPixmap get(QString category_name, QString name);
+
+private:
+    QPixmap* tileset;
 
     QJsonDocument json_map;
-
-    void get(QString category_name, QString name);
 };
 
 #endif // TILESETSPLITTER_H
