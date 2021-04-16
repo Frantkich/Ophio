@@ -7,7 +7,9 @@
 class Ophio : public Entity
 {
 public:
-    Ophio();
+    Ophio(int maxHp, int movingRange, QString name, QPixmap skin);
+
+public:
     void showHp(QGridLayout *scene);
 };
 

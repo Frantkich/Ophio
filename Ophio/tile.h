@@ -3,8 +3,11 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
+#include <QMouseEvent>
+#include <QWidget>
+#include <entity.h>
 
-class Tile : public QObject
+class Tile : public QWidget
 {
     Q_OBJECT
 public:
@@ -13,6 +16,9 @@ public:
 public:
     QGraphicsPixmapItem* top = new QGraphicsPixmapItem();
     QGraphicsPixmapItem* side = new QGraphicsPixmapItem();
+
+public:
+    Entity entity;
 };
 
 #endif // TILE_H

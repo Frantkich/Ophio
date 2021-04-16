@@ -10,6 +10,7 @@
 #include "entity.h"
 #include "fightmap.h"
 #include "hud.h"
+#include "tilesetsplitter.h"
 
 class GameLoop : public QGraphicsView
 {

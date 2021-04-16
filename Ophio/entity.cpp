@@ -1,12 +1,13 @@
 #include "entity.h"
 
 
-Entity::Entity(int maxHp, int movingRange, QString name)
+Entity::Entity(int maxHp, int movingRange, QString name, QPixmap skin)
 {
     maxHealth = maxHp;
     health = maxHealth;
     this->movingRange = movingRange;
     this->name = name;
+    this->skin = skin;
 }
 
 void Entity::decreaseHp(unsigned damage)

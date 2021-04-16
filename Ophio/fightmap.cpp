@@ -33,8 +33,6 @@ void FightMap::addScene()
         x_offset -= tile_pace * this->tile_size * ( this->scene_size + 1 );
         y_offset -= tile_pace * this->tile_size * ( this->scene_size - 1 );
     }
-    //TilesetSplitter* t = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
-    //this->scene->addPixmap(t->get("big_monsters", "big_green"));
 }
 
 void FightMap::addSceneSide()

@@ -1,8 +1,8 @@
 #include "enemy.h"
 #include <QRandomGenerator>
 
-Enemy::Enemy(bool isMelee, int damage)
-    : Entity(100, 0, "enemy")
+Enemy::Enemy(int maxHp, int movingRange, QString name, QPixmap skin, bool isMelee, int damage)
+    : Entity(maxHp, movingRange, name, skin)
 {
     this->isMelee = isMelee;
     this->damage = damage;

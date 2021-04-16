@@ -20,3 +20,4 @@ Tile::Tile(int size)
     this->side->setTransform(side_transform.rotate(-45, Qt::YAxis), false);
     this->side->setTransform(side_transform.rotate(-45, Qt::XAxis), false);
 }
+

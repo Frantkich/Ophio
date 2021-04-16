@@ -6,7 +6,7 @@
 class Enemy : public Entity
 {
 public:
-    Enemy(bool isMelee, int damage);
+    Enemy(int maxHp, int movingRange, QString name, QPixmap skin, bool isMelee, int damage);
 
 public:
     void attack(int x, int y);

@@ -13,6 +13,7 @@ public:
 public:
     void addScene();
     void addSceneSide();
+    void fillFightMap(QList<Entity>);
 
 public:
     int tile_px;

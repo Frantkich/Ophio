@@ -3,8 +3,8 @@
 #include <QProgressBar>
 #include <QGraphicsScene>
 
-Ophio::Ophio()
-    : Entity(100, 0, "Ophio")
+Ophio::Ophio(int maxHp, int movingRange, QString name, QPixmap skin)
+    : Entity(maxHp, movingRange, name, skin)
 {
 }
 
