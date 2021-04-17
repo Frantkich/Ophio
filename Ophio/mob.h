@@ -1,6 +1,7 @@
 #ifndef MOB_H
 #define MOB_H
 
+#include <QRandomGenerator>
 #include "entity.h"
 
 class Mob : public Entity
@@ -15,7 +16,6 @@ public:
 
     int damage() const;
     void setDamage(int damage);
-
 
     int attackRange() const;
     void setAttackRange(int attackRange);

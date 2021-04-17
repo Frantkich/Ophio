@@ -13,7 +13,7 @@ class Tile : public QWidget
 {
     Q_OBJECT
 public:
-    Tile(int size, TilesetSplitter *tileSplit);
+    Tile(TilesetSplitter *tileSplit);
 
 public:
     QGraphicsPixmapItem *topSprite_ = new QGraphicsPixmapItem();

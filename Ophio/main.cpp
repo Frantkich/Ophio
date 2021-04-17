@@ -1,6 +1,7 @@
 #include <QApplication>
 
 #include "gameloop.h"
+#include "hud.h"
 
 GameLoop* game;
 

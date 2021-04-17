@@ -3,7 +3,6 @@
 #include <QPushButton>
 #include <QGridLayout>
 #include <QListWidget>
-#include <QStringList>
 
 class Hud
 {
