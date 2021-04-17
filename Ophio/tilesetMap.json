@@ -8,7 +8,63 @@
             "height" : 1,
             "width" : 1,
             "nb_sprite" : 1
-        }
+        },
+        "floor2" : {
+            "pos_x" : 32,
+            "pos_y" : 64,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor3" : {
+            "pos_x" : 48,
+            "pos_y" : 64,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor4" : {
+            "pos_x" : 16,
+            "pos_y" : 80,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor5" : {
+            "pos_x" : 32,
+            "pos_y" : 80,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor6" : {
+            "pos_x" : 48,
+            "pos_y" : 80,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor7" : {
+            "pos_x" : 16,
+            "pos_y" : 96,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor8" : {
+            "pos_x" : 32,
+            "pos_y" : 96,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
+        "floor9" : {
+            "pos_x" : 48,
+            "pos_y" : 96,
+            "height" : 1,
+            "width" : 1,
+            "nb_sprite" : 1
+        },
     },
 
     "decorations" : {

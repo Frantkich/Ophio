@@ -3,7 +3,7 @@
 
 Tile::Tile(int size, TilesetSplitter *tileSplit)
 {
-    this->top_->setPixmap(tileSplit->get("floors", "floor1"));
+    this->top_->setPixmap(tileSplit->get("floors/floor1"));
     this->top_->setTransformOriginPoint(this->top_->boundingRect().center());
     this->top_->setRotation(45);
     QTransform top_transform;

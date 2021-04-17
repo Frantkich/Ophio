@@ -14,7 +14,7 @@ public:
     TilesetSplitter(QString tileset_path, QString json_map_path);
 
 public:
-    QPixmap get(QString category_name, QString name);
+    QPixmap get(QString name);
 
 private:
     QPixmap* tileset_;
