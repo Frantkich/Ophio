@@ -9,24 +9,28 @@ class Entity : public QObject
 {
     Q_OBJECT
 
-public:
-    Entity(int maxHp, int movingRange, QString name, QPixmap skin);
+protected:
+    Entity(QString name, int maxHp, QPixmap sprite=QPixmap(":image/bloc.png"));
+
+public :
+    void spawn();
+    void move();
 
 public:
-    void decreaseHp(unsigned damage);
-    int getHealth();
-    int getMaxHealth();
-    //void move();
+    QPixmap getSprite() const;
+    void setSprite(const QPixmap &sprite);
+
+    int getMaxHp() const;
+    void setMaxHp(int maxHp);
+
+    int getHp() const;
+    void setHp(int hp);
 
 private :
-    int health;
-    int maxHealth;
-    int movingRange;
-    QString name;
-    QPixmap skin;
-
-public slots :
-    void move();
+    QString name_;
+    QPixmap sprite_;
+    int maxHp_;
+    int hp_;
 };
 
 #endif // ENTITY_H

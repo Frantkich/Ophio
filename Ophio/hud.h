@@ -11,14 +11,15 @@ public:
     Hud();
 
 public:
+    void showHud(QGridLayout* scene);
+
+public:
     QPushButton* startButton = new QPushButton();
     QPushButton* actionButton = new QPushButton();
     QPushButton* moveButton = new QPushButton();
 
     QStringList* actionsList = new QStringList();
     QListWidget* actionsHistory = new QListWidget();
-
-    void showHud(QGridLayout* scene);
 };
 
 #endif // HUD_H

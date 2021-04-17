@@ -1,32 +1,41 @@
 #include "entity.h"
 
 
-Entity::Entity(int maxHp, int movingRange, QString name, QPixmap skin)
+Entity::Entity(QString name, int maxHp, QPixmap sprite) :
+    name_(name),
+    maxHp_(maxHp),
+    sprite_(sprite)
 {
-    maxHealth = maxHp;
-    health = maxHealth;
-    this->movingRange = movingRange;
-    this->name = name;
-    this->skin = skin;
+    hp_ = maxHp;
 }
 
-void Entity::decreaseHp(unsigned damage)
-{
-    health = health - damage;
+int Entity::getHp() const {
+    return hp_;
 }
 
-int Entity::getHealth()
-{
-     return health;
+void Entity::setHp(int hp) {
+    hp_ = hp;
 }
 
-int Entity::getMaxHealth()
-{
-     return maxHealth;
+
+int Entity::getMaxHp() const {
+    return maxHp_;
 }
 
-void Entity::move()
-{
+void Entity::setMaxHp(int maxHp) {
+    maxHp_ = maxHp;
+}
+
+QPixmap Entity::getSprite() const {
+    return sprite_;
+}
+
+void Entity::setSprite(const QPixmap &sprite) {
+    sprite_ = sprite;
+}
+
+
+void Entity::move() {
     /*
      * Faire en sorte que le déplacement soit max x +/- movingRange et y +/- movingRange en testant si un bord de la carte est touché
      * Highlight cases ou déplacement possible

@@ -5,20 +5,23 @@
 #include <QObject>
 #include <QMouseEvent>
 #include <QWidget>
+
 #include <entity.h>
+#include <tilesetsplitter.h>
 
 class Tile : public QWidget
 {
     Q_OBJECT
 public:
-    Tile(int size);
+    Tile(int size, TilesetSplitter *tileSplit);
 
 public:
-    QGraphicsPixmapItem* top = new QGraphicsPixmapItem();
-    QGraphicsPixmapItem* side = new QGraphicsPixmapItem();
+    QGraphicsPixmapItem* top_ = new QGraphicsPixmapItem();
 
 public:
-    Entity entity;
+    Entity *entity;
+    Entity *getEntity() const;
+    void setEntity(Entity *value);
 };
 
 #endif // TILE_H
