@@ -3,7 +3,10 @@
 
 Tile::Tile(int size, TilesetSplitter *tileSplit)
 {
-    this->top_->setPixmap(tileSplit->get("floors/floor1"));
+    //Tile has 20% of chance being different.
+    QString tileNumber = ( (rand() % 100) < 20 ? QString::number(rand() % 8 + 1) : "1" );
+
+    this->top_->setPixmap( tileSplit->get("floors/floor" + tileNumber ) );
     this->top_->setTransformOriginPoint(this->top_->boundingRect().center());
     this->top_->setRotation(45);
     QTransform top_transform;

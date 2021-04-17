@@ -16,7 +16,7 @@ public:
 public:
     QPixmap get(QString name);
 
-private:
+public:
     QPixmap* tileset_;
     QJsonDocument json_map_;
 };

@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
     window->setMinimumSize(700, 700);
     QGridLayout* layout = new QGridLayout(window);
 
+    srand((unsigned) time(0));
+
     /* Vie et Barre de vie */
     Player *player = new Player();
     //    Create Game Scene

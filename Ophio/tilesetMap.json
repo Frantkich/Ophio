@@ -57,14 +57,7 @@
             "height" : 1,
             "width" : 1,
             "nb_sprite" : 1
-        },
-        "floor9" : {
-            "pos_x" : 48,
-            "pos_y" : 96,
-            "height" : 1,
-            "width" : 1,
-            "nb_sprite" : 1
-        },
+        }
     },
 
     "decorations" : {

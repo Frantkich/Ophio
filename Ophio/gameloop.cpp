@@ -3,7 +3,6 @@
 
 GameLoop::GameLoop(Player *player, QWidget *parent)
 {
-
     TilesetSplitter* tileSplit = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
 
     setScene(this->scene);
