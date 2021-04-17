@@ -20,10 +20,8 @@ public:
     GameLoop(Player *player, QWidget* parent = nullptr);
 
 public:
-    QGraphicsScene* scene = new QGraphicsScene();
-
-public:
-    TilesetSplitter* t = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
+    TilesetSplitter* tileSplit = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
+    QGraphicsScene* scene_ = new QGraphicsScene();
 
 private:
     FightMap *fightmap_;

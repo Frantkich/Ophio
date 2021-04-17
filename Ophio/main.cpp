@@ -8,25 +8,25 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+//    Create Game Interface
     QWidget* window = new QWidget;
-
     window->setMinimumSize(700, 700);
     QGridLayout* layout = new QGridLayout(window);
+    window->setLayout(layout);
 
-    /* Vie et Barre de vie */
+//    Create Player & Add HP bar
     Player *player = new Player();
-    //    Create Game Scene
+    player->showHp(layout);
+
+//    Create Game Scene
     game = new GameLoop(player);
     game->show();
+    layout->addWidget(game, 1, 1, 1, 3);
 
+//    Create Buttons
     Hud* hud = new Hud();
     hud->showHud(layout);
 
-    player->showHp(layout);
-
-    layout->addWidget(game, 1, 1, 1, 3);
-    window->setLayout(layout);
     window->show();
-
     return a.exec();
 }

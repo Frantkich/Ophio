@@ -16,12 +16,10 @@ public:
     Tile(int size, TilesetSplitter *tileSplit);
 
 public:
-    QGraphicsPixmapItem* top_ = new QGraphicsPixmapItem();
+    QGraphicsPixmapItem *topSprite_ = new QGraphicsPixmapItem();
 
 public:
-    Entity *entity;
-    Entity *getEntity() const;
-    void setEntity(Entity *value);
+    Entity *entity_=nullptr;
 };
 
 #endif // TILE_H
