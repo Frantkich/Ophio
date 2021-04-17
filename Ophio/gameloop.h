@@ -3,15 +3,9 @@
 
 #include <QGraphicsView>
 #include <QWidget>
-#include <QGraphicsScene>
-#include <QGridLayout>
-#include <QLayoutItem>
 
-#include "tile.h"
 #include "player.h"
-#include "entity.h"
 #include "fightmap.h"
-#include "hud.h"
 #include "tilesetsplitter.h"
 
 class GameLoop : public QGraphicsView
