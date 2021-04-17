@@ -32,6 +32,11 @@ void Entity::setSprite(QPixmap sprite)
     sprite_->setPixmap(sprite);
 }
 
+QGraphicsPixmapItem *Entity::getSprite() const
+{
+    return sprite_;
+}
+
 int Entity::getMaxHp() const {
     return maxHp_;
 }
