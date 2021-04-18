@@ -10,14 +10,14 @@
 class TilesetSplitter
 {
 public:
-    TilesetSplitter(QString tileset_path, QString json_map_path);
+    TilesetSplitter(QString tilesetPath, QString jsonMapPath);
 
 public:
-    QPixmap get(QString name);
+    QPixmap getSprites(QString path);
 
-public:
+private:
     QPixmap* tileset_;
-    QJsonDocument json_map_;
+    QJsonObject json_object_;
 };
 
 #endif // TILESETSPLITTER_H
