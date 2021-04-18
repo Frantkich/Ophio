@@ -8,24 +8,34 @@ TilesetSplitter::TilesetSplitter(QString tilesetPath, QString jsonMapPath)
     file->open(QIODevice::ReadOnly | QIODevice::Text);
     json_object_ = QJsonDocument::fromJson(QString(file->readAll()).toUtf8()).object();
     file->close();
+    tileSize_ = json_object_.value("tileSize").toInt();
 }
 
 QPixmap TilesetSplitter::getSprites(QString path)
 {
-    QStringList list = path.split("/");
-    int tile_size = json_object_.value("tile_size").toInt();
+    QJsonObject obj = json_object_;
+    foreach (QString key, path.split("/")) {
+        obj = obj.value( key ).toObject();
+    }
 
-    QJsonObject category = json_object_.value( list[0] ).toObject();
-    QJsonObject obj = category.value( list[1] ).toObject();
-
-    if ( not(obj.empty()) ) {
-        return tileset_->copy( QRect(obj.value("pos_x").toInt() * tile_size,
-                                     obj.value("pos_y").toInt() * tile_size,
-                                     obj.value("width").toInt() * tile_size,
-                                     obj.value("height").toInt() * tile_size));
+    if ( obj.value("width").toInt() ) {
+        return tileset_->copy( QRect(obj.value("pos_x").toInt() * tileSize_,
+                                     obj.value("pos_y").toInt() * tileSize_,
+                                     obj.value("width").toInt() * tileSize_,
+                                     obj.value("height").toInt() * tileSize_));
     }
     else {
         qDebug() << "WARMING:" << "sprite ->" << path << "does not exist";
         return QPixmap(":image/bloc.png");
     }
+}
+
+int TilesetSplitter::getTileSize() const
+{
+    return tileSize_;
+}
+
+void TilesetSplitter::setTileSize(int tileSize)
+{
+    tileSize_ = tileSize;
 }

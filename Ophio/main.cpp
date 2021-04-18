@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     TilesetSplitter* tileSplit = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
 
 //    Create Player & Add HP bar
-    Player *player = new Player(tileSplit->getSprites("player/elf_f"));
+    Player *player = new Player(tileSplit->getSprites("players/elf_f"));
     player->showHp(layout);
 
 //    Create Game Scene
