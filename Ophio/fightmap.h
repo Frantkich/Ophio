@@ -1,6 +1,8 @@
 #ifndef FIGHTMAP_H
 #define FIGHTMAP_H
 
+#include <QtDebug>
+
 #include "tilesetsplitter.h"
 #include "tile.h"
 
@@ -21,7 +23,7 @@ private:
     QList<QList<Tile*>> map_;
     int sceneWidth_;
     int sceneHeigh_;
-    int tileSize_=16;
+    int tileSize_;
     int tileZoom_=1;
 };
 
