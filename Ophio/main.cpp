@@ -16,11 +16,12 @@ int main(int argc, char *argv[])
     QGridLayout* layout = new QGridLayout(window);
     window->setLayout(layout);
 
+    srand((unsigned) time(0));
 //    Create TilesetSplitter for Graphic management
     TilesetSplitter* tileSplit = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
 
 //    Create Player & Add HP bar
-    Player *player = new Player(tileSplit->get("entities", "elf_m"));
+    Player *player = new Player(tileSplit->get("entities/elf_m"));
     player->showHp(layout);
 
 //    Create Game Scene
