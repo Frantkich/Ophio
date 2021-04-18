@@ -16,9 +16,14 @@ public:
     Tile(TilesetSplitter *tileSplit);
 
 public:
-    QGraphicsPixmapItem *topSprite_ = new QGraphicsPixmapItem();
+    QGraphicsPixmapItem *getTopSprite() const;
+    void setTopSprite(QGraphicsPixmapItem *topSprite);
 
-public:
+    Entity *getEntity() const;
+    void setEntity(Entity *entity);
+
+private:
+    QGraphicsPixmapItem *topSprite_ = new QGraphicsPixmapItem();
     Entity *entity_=nullptr;
 };
 
