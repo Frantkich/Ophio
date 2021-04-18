@@ -26,7 +26,7 @@ QPixmap TilesetSplitter::getSprites(QString path)
     }
     else {
         qDebug() << "WARMING:" << "sprite ->" << path << "does not exist";
-        return QPixmap(":image/bloc.png");
+        return QPixmap(":image/not_found.png");
     }
 }
 

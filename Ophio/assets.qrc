@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/image">
-        <file>bloc.png</file>
         <file>DungeonTileset.png</file>
+        <file>not_found.png</file>
     </qresource>
-    <qresource prefix="/json" lang="json">
+    <qresource lang="json" prefix="/json">
         <file>tilesetMap.json</file>
     </qresource>
 </RCC>
