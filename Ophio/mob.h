@@ -6,7 +6,6 @@
 
 class Mob : public Entity
 {
-    Q_OBJECT
 public:
     Mob(QString name, int maxHp, int movingRange, int damage, int attackRange, bool isPlayer=0, QPixmap sprite=QPixmap(":image/bloc.png"));
 
