@@ -1,6 +1,6 @@
 #include "gameloop.h"
 
-GameLoop::GameLoop(Player *player, TilesetSplitter* tileSplit, QWidget *parent)
+GameLoop::GameLoop(Player *player, TilesetSplitter* tileSplit)
 {
     setScene(this->scene_);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

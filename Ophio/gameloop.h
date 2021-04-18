@@ -10,7 +10,7 @@
 class GameLoop : public QGraphicsView
 {
 public:
-    GameLoop(Player *player, TilesetSplitter* tileSplit, QWidget* parent = nullptr);
+    GameLoop(Player *player, TilesetSplitter* tileSplit);
 
 private:
     FightMap *fightmap_;
