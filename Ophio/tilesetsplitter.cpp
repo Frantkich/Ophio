@@ -14,7 +14,6 @@ TilesetSplitter::TilesetSplitter(QString tileset_path, QString json_map_path)
 QPixmap TilesetSplitter::get(QString category_name, QString name)
 {
     QJsonObject json_object = this->json_map_.object();
-
     int tile_size = json_object.value("tile_size").toInt();
     QJsonObject category = json_object.value(category_name).toObject();
     QJsonObject obj = category.value(name).toObject();

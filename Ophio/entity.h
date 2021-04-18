@@ -1,9 +1,9 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include <QString>
 #include <QObject>
 #include <QPixmap>
+#include <QGraphicsPixmapItem>
 
 class Entity : public QObject
 {
@@ -12,23 +12,22 @@ class Entity : public QObject
 protected:
     Entity(QString name, int maxHp, QPixmap sprite=QPixmap(":image/bloc.png"));
 
-public :
-    void spawn();
-    void move();
-
 public:
-    QPixmap getSprite() const;
-    void setSprite(const QPixmap &sprite);
-
     int getMaxHp() const;
     void setMaxHp(int maxHp);
 
     int getHp() const;
     void setHp(int hp);
 
+    QString getName() const;
+    void setName(const QString &name);
+
+    QGraphicsPixmapItem *getSprite() const;
+    void setSprite(QPixmap sprite);
+
 private :
+    QGraphicsPixmapItem *sprite_= new QGraphicsPixmapItem();
     QString name_;
-    QPixmap sprite_;
     int maxHp_;
     int hp_;
 };

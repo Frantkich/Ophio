@@ -1,28 +1,30 @@
 #ifndef FIGHTMAP_H
 #define FIGHTMAP_H
 
-#include <QGraphicsScene>
-#include <tilesetsplitter.h>
+#include <QtDebug>
 
+#include "tilesetsplitter.h"
 #include "tile.h"
 
 class FightMap
 {
-public:
-    FightMap(QGraphicsScene* scene, int scene_size, int tile_size, TilesetSplitter *tileSplit);
 
 public:
-    void addScene();
-    void fillFightMap(QList<Entity>);
+    FightMap(int sceneWidth, int sceneHeigh, TilesetSplitter *tileSplit);
 
 public:
-    int tile_px;
+    QList<QGraphicsPixmapItem*> getFightMap();
+    QList<QGraphicsPixmapItem*> getFloor();
+    QList<QGraphicsPixmapItem*> getEntities();
+    void setEntities(QList<QPair<Entity*, QPoint>> list);
+    void setFloor();
 
 private:
     QList<QList<Tile*>> map_;
-    QGraphicsScene* scene_;
-    int scene_size_;
-    int tile_size_;
+    int sceneWidth_;
+    int sceneHeigh_;
+    int tileSize_;
+    int tileZoom_=1;
 };
 
 #endif // FIGHTMAP_H

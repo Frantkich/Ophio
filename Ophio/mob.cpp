@@ -1,5 +1,4 @@
 #include "mob.h"
-#include <QRandomGenerator>
 
 Mob::Mob(QString name, int maxHp, int movingRange, int damage, int attackRange, bool isPlayer, QPixmap sprite):
     Entity(name, maxHp, sprite),

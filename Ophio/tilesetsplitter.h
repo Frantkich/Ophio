@@ -2,7 +2,6 @@
 #define TILESETSPLITTER_H
 
 #include <QPixmap>
-#include <QString>
 #include <QFile>
 #include <QDebug>
 #include <QJsonDocument>

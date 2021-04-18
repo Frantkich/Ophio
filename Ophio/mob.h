@@ -1,11 +1,11 @@
 #ifndef MOB_H
 #define MOB_H
 
+#include <QRandomGenerator>
 #include "entity.h"
 
 class Mob : public Entity
 {
-    Q_OBJECT
 public:
     Mob(QString name, int maxHp, int movingRange, int damage, int attackRange, bool isPlayer=0, QPixmap sprite=QPixmap(":image/bloc.png"));
 
@@ -15,7 +15,6 @@ public:
 
     int damage() const;
     void setDamage(int damage);
-
 
     int attackRange() const;
     void setAttackRange(int attackRange);
