@@ -4,14 +4,12 @@ FightMap::FightMap(int sceneWidth, int sceneHeigh, TilesetSplitter *tileSplit):
     sceneWidth_(sceneWidth),
     sceneHeigh_(sceneHeigh)
 {
+    tileSize_=tileSplit->getTileSize();
     for (int y=0; y<sceneHeigh_; y++) {
         map_.append(QList<Tile*>());
         for (int x=0; x<sceneWidth_; x++) {
             map_[y].append(new Tile(tileSplit));
         }
-    }
-    if ( not(map_.empty()) ){
-        tileSize_=map_[0][0]->getTopSprite()->boundingRect().height();
     }
 }
 
