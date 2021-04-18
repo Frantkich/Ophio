@@ -9,6 +9,9 @@
 #include <entity.h>
 #include <tilesetsplitter.h>
 
+//Tile defines each fightMap box, it handles the graphical aspect (with sprite) and entities positioning on the map.
+//Tiles sprites aren't the same, so every fightmap will be different.
+
 class Tile : public QWidget
 {
     Q_OBJECT

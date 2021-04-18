@@ -5,6 +5,11 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 
+// Entity defines all placeable objects.
+// We used QPixmap class, in order to display items, and easely manage sprites.
+// We set the major part of our properties in private with aim of having more control on the code for futur development.
+// We also chosed to set it constructor in protected, in order to instanciate it as virtual class.
+
 class Entity : public QObject
 {
     Q_OBJECT

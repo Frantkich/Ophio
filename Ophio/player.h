@@ -6,6 +6,8 @@
 #include "mob.h"
 #include <QProgressBar>
 
+//The player class is aime for managing and displaying the player healthbar (including a colour effect).
+
 class Player : public Mob
 {
 public:

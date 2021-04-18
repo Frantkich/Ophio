@@ -23,9 +23,4 @@ void Hud::showHud(QGridLayout* layout)
     moveButton->setText("moveButton");
     moveButton->setFixedSize(300,40);
     layout->addWidget(moveButton, 2, 2);
-
-    // History
-    //actionsList->append("1");
-    //actionsHistory->addItems(actionsList);
-    //layout->addWidget(actionsHistory, 2,1);
 }

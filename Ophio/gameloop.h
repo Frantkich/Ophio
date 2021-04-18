@@ -7,6 +7,8 @@
 #include "player.h"
 #include "fightmap.h"
 
+//Gameloop class defines the game interface structure.
+
 class GameLoop : public QGraphicsView
 {
 public:

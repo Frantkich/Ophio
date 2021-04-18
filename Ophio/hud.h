@@ -4,6 +4,8 @@
 #include <QGridLayout>
 #include <QListWidget>
 
+//For the Hud structure we mainly used basic graphical component for a first render.
+
 class Hud
 {
 public:

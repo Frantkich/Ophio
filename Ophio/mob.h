@@ -4,6 +4,8 @@
 #include <QRandomGenerator>
 #include "entity.h"
 
+// Mob class defines an active entity. It can be the Ophio host, this explains the isPlayer attribute.
+
 class Mob : public Entity
 {
 public:

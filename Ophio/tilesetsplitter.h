@@ -7,6 +7,10 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 
+//This class is used for splitting a tileset, and retrieve a sprite according to it name and a ceratin jsonMap.
+//The idea was to have the most modular system of sprite managing, in order to easely manage different tileset.
+//This explains why we developed JsonMap system, which can be compare as a tileset structure direct access.
+
 class TilesetSplitter
 {
 public:
