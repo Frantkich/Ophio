@@ -1,7 +1,7 @@
 #include "player.h"
 
-Player::Player() :
-    Mob("Ophio", 100, 3, 25, 2, 1)
+Player::Player(QPixmap sprite) :
+    Mob("Ophio", 100, 3, 25, 2, 1, sprite)
 {
 }
 

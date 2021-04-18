@@ -6,19 +6,15 @@
 
 #include "player.h"
 #include "fightmap.h"
-#include "tilesetsplitter.h"
 
 class GameLoop : public QGraphicsView
 {
 public:
-    GameLoop(Player *player, QWidget* parent = nullptr);
-
-public:
-    TilesetSplitter* tileSplit = new TilesetSplitter(":/image/DungeonTileset.png", ":/json/tilesetMap.json");
-    QGraphicsScene* scene_ = new QGraphicsScene();
+    GameLoop(Player *player, TilesetSplitter* tileSplit, QWidget* parent = nullptr);
 
 private:
     FightMap *fightmap_;
+    QGraphicsScene* scene_ = new QGraphicsScene();
 };
 
 #endif // GAMELOOP_H
