@@ -45,9 +45,9 @@ QList<QGraphicsPixmapItem *> FightMap::getEntities()
     foreach (auto rows, map_) {
         foreach (Tile *tile, rows) {
             if ( tile->getEntity() ) {
-//                int w = tile->entity_->getSprite()->boundingRect().width();
+                int w = tile->getEntity()->getSprite()->boundingRect().width();
                 int h = tile->getEntity()->getSprite()->boundingRect().height();
-                int posX = tile->getTopSprite()->x() + tileSize_/2;
+                int posX = tile->getTopSprite()->x() + tileSize_/2 - w/5;
                 int posY = tile->getTopSprite()->y() + tileSize_*0.75 - h;
                 tile->getEntity()->getSprite()->setPos(posX, posY);
                 to_render.append(tile->getEntity()->getSprite());

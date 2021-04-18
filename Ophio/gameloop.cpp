@@ -12,7 +12,7 @@ GameLoop::GameLoop(Player *player, TilesetSplitter* tileSplit)
 
     fightmap_->setEntities({qMakePair(player, QPoint(1,0)),
                             qMakePair(new Mob("Gobelin", 50, 2, 15, 1, 0, tileSplit->getSprites("monsters/big/brown")), QPoint(3,1)),
-                            qMakePair(new Mob("Demon", 100, 2, 15, 1, 0, tileSplit->getSprites("monsters/medium/redd")), QPoint(5,2))
+                            qMakePair(new Mob("Demon", 100, 2, 15, 1, 0, tileSplit->getSprites("monsters/medium/red")), QPoint(5,2))
                            });
 
 //    Show FightMap
