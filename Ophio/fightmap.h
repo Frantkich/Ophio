@@ -17,7 +17,6 @@ public:
     QList<QGraphicsPixmapItem*> getFloor();
     QList<QGraphicsPixmapItem*> getEntities();
     void setEntities(QList<QPair<Entity*, QPoint>> list);
-    void setFloor();
 
 private:
     QList<QList<Tile*>> map_;

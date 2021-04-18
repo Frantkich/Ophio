@@ -11,7 +11,7 @@ FightMap::FightMap(int sceneWidth, int sceneHeigh, TilesetSplitter *tileSplit):
         }
     }
     if ( not(map_.empty()) ){
-        tileSize_=map_[0][0]->topSprite_->boundingRect().height();
+        tileSize_=map_[0][0]->getTopSprite()->boundingRect().height();
     }
 }
 
@@ -30,8 +30,8 @@ QList<QGraphicsPixmapItem*> FightMap::getFloor()
     int posY = 0;
     for (int y=0; y< sceneHeigh_; y++) {
         for (int x=0; x<sceneWidth_; x++) {
-            map_[y][x]->topSprite_->setPos(posX, posY);
-            to_render.append(map_[y][x]->topSprite_);
+            map_[y][x]->getTopSprite()->setPos(posX, posY);
+            to_render.append(map_[y][x]->getTopSprite());
             posX += tileSize_*2;
             posY += tileSize_;
         }
@@ -46,13 +46,13 @@ QList<QGraphicsPixmapItem *> FightMap::getEntities()
     QList<QGraphicsPixmapItem*> to_render;
     foreach (auto rows, map_) {
         foreach (Tile *tile, rows) {
-            if ( tile->entity_ ) {
+            if ( tile->getEntity() ) {
 //                int w = tile->entity_->getSprite()->boundingRect().width();
-                int h = tile->entity_->getSprite()->boundingRect().height();
-                int posX = tile->topSprite_->x() + tileSize_/2;
-                int posY = tile->topSprite_->y() + tileSize_*0.75 - h;
-                tile->entity_->getSprite()->setPos(posX, posY);
-                to_render.append(tile->entity_->getSprite());
+                int h = tile->getEntity()->getSprite()->boundingRect().height();
+                int posX = tile->getTopSprite()->x() + tileSize_/2;
+                int posY = tile->getTopSprite()->y() + tileSize_*0.75 - h;
+                tile->getEntity()->getSprite()->setPos(posX, posY);
+                to_render.append(tile->getEntity()->getSprite());
             }
         }
     }
@@ -63,7 +63,7 @@ void FightMap::setEntities(QList<QPair<Entity*, QPoint>> list)
 {
     foreach (auto element, list) {
         if (element.second.y() <= sceneHeigh_ && element.second.x() <= sceneWidth_ ) {
-            map_[element.second.y()][element.second.x()]->entity_=element.first;
+            map_[element.second.y()][element.second.x()]->setEntity(element.first);
         }
         else {
             qDebug() << "WARMING:" << "Entity ->" << element.first->getName() << "tried to spawn out of the map";
@@ -71,9 +71,5 @@ void FightMap::setEntities(QList<QPair<Entity*, QPoint>> list)
     }
 }
 
-void FightMap::setFloor()
-{
-
-}
 
 
