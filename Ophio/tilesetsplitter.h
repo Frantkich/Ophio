@@ -15,7 +15,11 @@ public:
 public:
     QPixmap getSprites(QString path);
 
+    int getTileSize() const;
+    void setTileSize(int tileSize);
+
 private:
+    int tileSize_;
     QPixmap* tileset_;
     QJsonObject json_object_;
 };
