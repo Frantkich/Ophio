@@ -3,7 +3,7 @@
 
     "floors" : {
         "floor1" : {
-            "pos_x" : 16,
+            "pos_x" : 0,
             "pos_y" : 64,
             "height" : 1,
             "width" : 1,
@@ -30,7 +30,7 @@
 
     "entities" : {
         "elf_m" : {
-            "pos_x" : 128,
+            "pos_x" : 112,
             "pos_y" : 32,
             "height" : 2,
             "width" : 1,
@@ -38,7 +38,7 @@
         },
 
         "knight_m" : {
-            "pos_x" : 128,
+            "pos_x" : 112,
             "pos_y" : 96,
             "height" : 2,
             "width" : 1,
@@ -48,7 +48,7 @@
 
     "tiny_monsters" : {
         "little_brown" : {
-            "pos_x" : 372,
+            "pos_x" : 360,
             "pos_y" : 16,
             "height" : 1,
             "width" : 1,
